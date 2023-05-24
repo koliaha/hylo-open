@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+  width: 320px;
+  height: 480px;
+  font-family: "Roboto";
+}
+.inv {
+  visibility: hidden;
+}
+.container {
+  width: 320px;
+  height: 480px;
+  background: linear-gradient(180deg, #e3ecf5 0%, #f1f1f1 100%);
+  position: relative;
+}
+.nav {
+  background: white;
+  width: 100%;
+  height: 73px;
+  display: flex;
+  justify-content: center;
+  padding: 9px;
+}
+.main-title {
+  position: absolute;
+  top: 108px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1a4a7f;
+}
+.footer {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #002046;
+  position: absolute;
+  bottom: 10px;
+}
+.game {
+  top: 160px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 271px;
+  height: 245px;
+}
+
+.cell {
+  background-color: white;
+  border: 1px solid #1a4a7f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.path-color {
+  fill: #fc694b;
+}
+.cell.clicked .path-color {
+  /* background-color: gray; */
+  fill: #f1f1f2;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+}
+.heart-red {
+  position: absolute;
+  z-index: 1;
+}
+.number {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.guested .path-color {
+  fill: #0159a6 !important;
+}
+
+.second-page {
+  position: absolute;
+  top: 102px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fc694b;
+}
+.second-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 147%;
+  text-align: center;
+  color: #1a4a7f;
+}
+.prod{
+    width: 119.61px;
+    margin-top: 14px;
+}
+.btn {
+  width: 198.59px;
+  height: 32.5px;
+  line-height: 32.5px;
+  background: #0159a6;
+  box-shadow: 0px 2px 4px #437fc2;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
