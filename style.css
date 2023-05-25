@@ -11,15 +11,40 @@ body {
   width: 320px;
   height: 480px;
   font-family: "Roboto";
+  overflow: hidden;
 }
 .inv {
   visibility: hidden;
+}
+
+#first{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+#second{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  transition: 0.5s;
+  right: -100%;
+}
+.toleft{
+  left: -100% !important;
+}
+.tocenter{
+  right: 0% !important;
 }
 .container {
   width: 320px;
   height: 480px;
   background: linear-gradient(180deg, #e3ecf5 0%, #f1f1f1 100%);
   position: relative;
+  overflow: hidden;
 }
 .nav {
   background: white;
@@ -72,6 +97,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow:hidden ;
 }
 .path-color {
   fill: #fc694b;
@@ -88,6 +114,7 @@ body {
 .heart-red {
   position: absolute;
   z-index: 1;
+  transition: 0.3s;
 }
 .number {
   position: absolute;
@@ -140,4 +167,102 @@ body {
   border-radius: 5px;
   text-align: center;
   color: white;
+  animation: pulse2 2s linear infinite;
+}
+.heart-red svg{
+  width: 100%;
+}
+.cell1 .heart-red{
+  left: calc(50% - 81.55px/2 + 1.82px);
+  top: calc(50% - 68.94px/2 + 3.42px);
+}
+.cell2 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 + 13.5px);
+  top: calc(50% - 93px/2 - 20px);
+}
+.cell3 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 - 21px);
+  top: calc(50% - 93px/2 + 22px);
+}
+.cell3 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 - 21px);
+  top: calc(50% - 93px/2 + 22px);
+}
+.cell4 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 - 30px);
+  top: calc(50% - 93px/2 + 31px);
+}
+.cell5 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 + 23.5px);
+  top: calc(50% - 93px/2 + 11px);
+}
+.cell6 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 + 14px);
+  top: calc(50% - 93px/2);
+}
+.cell7 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 + 20px);
+  top: calc(50% - 93px/2 + 26px);
+}.cell8 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 - 20.5px);
+  top: calc(50% - 93px/2 - 17px);
+}
+.cell9 .heart-red{
+  width: 110px;
+  height: 93px;
+  left: calc(50% - 110px/2 + 23px);
+  top: calc(50% - 93px/2);
+}
+.cell.guested  .number{
+color:#0159A6 !important;
+}
+.cell.guested .heart-red {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scale(0.7);
+  animation: pulse 2s linear infinite;
+}
+@keyframes pulse {
+  0% {
+   transform: scale(0.7);
+  }
+
+  50% {
+   transform: scale(0.73);
+  }
+
+  100% {
+  transform: scale(0.7);
+  }
+}
+@keyframes pulse2 {
+  0% {
+   transform: scale(1);
+  }
+
+  50% {
+   transform: scale(1.03);
+  }
+
+  100% {
+  transform: scale(1);
+  }
 }

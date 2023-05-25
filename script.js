@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var cells = document.getElementsByClassName("cell");
   var targetCellNumber = getRandomCellNumber();
   var targetCell = cells[targetCellNumber - 1];
+  let gues = false
   var targetNumber = targetCell.getElementsByClassName("number")[0];
 
   targetCell.classList.add("target");
@@ -19,17 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cellNumber === targetCellNumber) {
       cell.classList.add("guested");
-      nextPage()
+      gues = true
+      setTimeout(() => {
+        nextPage();
+      }, 1700);
     }
   }
-function nextPage(){
-    document.getElementById('first').classList.add('inv')
-    document.getElementById('second').classList.remove('inv')
-}
+  function nextPage() {
+    setTimeout(() => {
+      document.getElementById("first").classList.add("toleft");
+      setTimeout(() => {
+        document.getElementById("second").classList.add("tocenter");
+      }, 400);
+    }, 1500);
+  
+  
+  }
   for (var i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", function () {
       var cellNumber = parseInt(this.dataset.cell);
-      checkCell(cellNumber);
+      if(!gues) checkCell(cellNumber);
     });
   }
 });
